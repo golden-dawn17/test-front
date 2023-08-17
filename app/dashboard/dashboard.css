@@ -1,0 +1,20 @@
+.dashboardLayout {  display: grid;
+    grid-template-columns: 265px 265px 265px 220px 220px;
+    grid-template-rows: 135px 500px;
+    gap: 18px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "box1 box2 box3 box5 box5"
+      "box4 box4 box4 box5 box5";
+  }
+  
+  .box1 { grid-area: box1; }
+  
+  .box2 { grid-area: box2; }
+  
+  .box3 { grid-area: box3; }
+  
+  .box4 { grid-area: box4; }
+  
+  .box5 { grid-area: box5; }
+  
