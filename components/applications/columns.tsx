@@ -1,12 +1,10 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table"
-
-import { Badge } from "../ui/badge"
-import { Checkbox } from "../ui/checkbox"
-
 import { labels, risks, types } from "@/app/dashboard/applications/data/data"
 import { Task } from "@/app/dashboard/applications/data/schema"
+import { Badge } from "../ui/badge"
+import { Checkbox } from "../ui/checkbox"
 import { DataTableColumnHeader } from "./data-table-column-header"
 import { DataTableRowActions } from "./data-table-row-actions"
 
@@ -32,7 +30,7 @@ export const columns: ColumnDef<Task>[] = [
     enableSorting: false,
     enableHiding: false,
   },
-/*  {
+  /*  {
     accessorKey: "id",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Id" />
@@ -65,9 +63,7 @@ export const columns: ColumnDef<Task>[] = [
       <DataTableColumnHeader column={column} title="Type" />
     ),
     cell: ({ row }) => {
-      const type = types.find(
-        (type) => type.value === row.getValue("type")
-      )
+      const type = types.find((type) => type.value === row.getValue("type"))
 
       if (!type) {
         return null
@@ -78,7 +74,9 @@ export const columns: ColumnDef<Task>[] = [
           {type.icon && (
             <type.icon className="mr-2 h-4 w-4 text-muted-foreground" />
           )}
-          <span className="w-[80px] truncate" style={{fontWeight:"400"}}>{type.label}</span>
+          <span className="w-[80px] truncate" style={{ fontWeight: "400" }}>
+            {type.label}
+          </span>
         </div>
       )
     },
@@ -92,34 +90,37 @@ export const columns: ColumnDef<Task>[] = [
       <DataTableColumnHeader column={column} title="Risk" />
     ),
     cell: ({ row }) => {
-      const risk = risks.find(
-        (risk) => risk.value === row.getValue("risk")
-      )
+      const risk = risks.find((risk) => risk.value === row.getValue("risk"))
       if (!risk) {
         return null
       }
       let risk_bg = "#ffffff"
       let risk_bgtext = "#000000"
-      if (risk.value=="high"){
+      if (risk.value == "high") {
         risk_bg = "#FFE2AC"
         risk_bgtext = "#D84318"
-      }
-      else if (risk.value=="medium"){
+      } else if (risk.value == "medium") {
         risk_bg = "#CDF4FF"
         risk_bgtext = "#0F7587"
-      }
-      else if (risk.value=="low") {
-        risk_bg = "#22C55E66";
+      } else if (risk.value == "low") {
+        risk_bg = "#22C55E66"
         risk_bgtext = "#599E18"
       }
 
       return (
         <div className="flex items-center">
-          <Badge variant="outline" className="h-6" style={{background:risk_bg}}>          
+          <Badge
+            variant="outline"
+            className="h-6"
+            style={{ background: risk_bg }}
+          >
             {risk.icon && (
-            <risk.icon className="mr-2 h-4 w-4" style={{color: risk_bgtext}} />
-              )}
-            <span style={{color:risk_bgtext}}>{risk.label}</span>
+              <risk.icon
+                className="mr-2 h-4 w-4"
+                style={{ color: risk_bgtext }}
+              />
+            )}
+            <span style={{ color: risk_bgtext }}>{risk.label}</span>
           </Badge>
         </div>
       )
@@ -133,7 +134,11 @@ export const columns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Security & Policy" />
     ),
-    cell: ({ row }) => <div className="w-[80px] truncate font-medium">{row.getValue("security_policy")}</div>,
+    cell: ({ row }) => (
+      <div className="w-[80px] truncate font-medium">
+        {row.getValue("security_policy")}
+      </div>
+    ),
     enableSorting: false,
     enableHiding: false,
   },
@@ -142,7 +147,9 @@ export const columns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="IAM" />
     ),
-    cell: ({ row }) => <div className="w-[80px] truncate font-medium">{row.getValue("iam")}</div>,
+    cell: ({ row }) => (
+      <div className="w-[80px] truncate font-medium">{row.getValue("iam")}</div>
+    ),
     enableSorting: false,
     enableHiding: false,
   },
@@ -151,7 +158,11 @@ export const columns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Compliance" />
     ),
-    cell: ({ row }) => <div className="max-w-[80px] truncate font-medium">{row.getValue("compliance")}</div>,
+    cell: ({ row }) => (
+      <div className="max-w-[80px] truncate font-medium">
+        {row.getValue("compliance")}
+      </div>
+    ),
     enableSorting: false,
     enableHiding: false,
   },

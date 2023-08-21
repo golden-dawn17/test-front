@@ -1,10 +1,7 @@
 import Link from "next/link"
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "../ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 import { Button } from "../ui/button"
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -38,20 +35,12 @@ export function UserNav() {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
-            Profile
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            Settings
-          </DropdownMenuItem>
+          <DropdownMenuItem>Profile</DropdownMenuItem>
+          <DropdownMenuItem>Settings</DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <Link
-                href="/login"
-              >
-                Logout
-          </Link>{" "}
+          <Link href="/login">Logout</Link>{" "}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -1,12 +1,13 @@
+import { Table } from "@tanstack/react-table"
+import { Button } from "../ui/button"
+
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
   DoubleArrowLeftIcon,
   DoubleArrowRightIcon,
 } from "@radix-ui/react-icons"
-import { Table } from "@tanstack/react-table"
 
-import { Button } from "../ui/button"
 import {
   Select,
   SelectContent,
@@ -37,7 +38,12 @@ export function DataTablePagination<TData>({
               table.setPageSize(Number(value))
             }}
           >
-            <SelectTrigger className="h-8 w-[70px]" style={{boxShadow:"0px 1px 4px 0px #E5E4E2, 0px 1px 4px 0px #E5E4E2"}}>
+            <SelectTrigger
+              className="h-8 w-[70px]"
+              style={{
+                boxShadow: "0px 1px 4px 0px #E5E4E2, 0px 1px 4px 0px #E5E4E2",
+              }}
+            >
               <SelectValue placeholder={table.getState().pagination.pageSize} />
             </SelectTrigger>
             <SelectContent side="top">
@@ -59,7 +65,9 @@ export function DataTablePagination<TData>({
             className="hidden h-8 w-8 p-0 lg:flex"
             onClick={() => table.setPageIndex(0)}
             disabled={!table.getCanPreviousPage()}
-            style={{boxShadow:"0px 1px 2px 0px #E5E4E2, 0px 1px 2px 0px #E5E4E2"}}
+            style={{
+              boxShadow: "0px 1px 2px 0px #E5E4E2, 0px 1px 2px 0px #E5E4E2",
+            }}
           >
             <span className="sr-only">Go to first page</span>
             <DoubleArrowLeftIcon className="h-4 w-4" />
@@ -69,7 +77,9 @@ export function DataTablePagination<TData>({
             className="h-8 w-8 p-0"
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
-            style={{boxShadow:"0px 1px 2px 0px #E5E4E2, 0px 1px 2px 0px #E5E4E2"}}
+            style={{
+              boxShadow: "0px 1px 2px 0px #E5E4E2, 0px 1px 2px 0px #E5E4E2",
+            }}
           >
             <span className="sr-only">Go to previous page</span>
             <ChevronLeftIcon className="h-4 w-4" />
@@ -79,7 +89,9 @@ export function DataTablePagination<TData>({
             className="h-8 w-8 p-0"
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
-            style={{boxShadow:"0px 1px 2px 0px #E5E4E2, 0px 1px 2px 0px #E5E4E2"}}
+            style={{
+              boxShadow: "0px 1px 2px 0px #E5E4E2, 0px 1px 2px 0px #E5E4E2",
+            }}
           >
             <span className="sr-only">Go to next page</span>
             <ChevronRightIcon className="h-4 w-4" />
@@ -89,7 +101,9 @@ export function DataTablePagination<TData>({
             className="hidden h-8 w-8 p-0 lg:flex"
             onClick={() => table.setPageIndex(table.getPageCount() - 1)}
             disabled={!table.getCanNextPage()}
-            style={{boxShadow:"0px 1px 2px 0px #E5E4E2, 0px 1px 2px 0px #E5E4E2"}}
+            style={{
+              boxShadow: "0px 1px 2px 0px #E5E4E2, 0px 1px 2px 0px #E5E4E2",
+            }}
           >
             <span className="sr-only">Go to last page</span>
             <DoubleArrowRightIcon className="h-4 w-4" />

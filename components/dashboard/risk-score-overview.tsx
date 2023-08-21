@@ -95,9 +95,9 @@ export function RiskScoreOverview() {
           axisLine={false}
           tickFormatter={(value) => `${value}`}
         />
-        <Bar dataKey="high" stackId="a" fill="#FF754C"/>
-        <Bar dataKey="medium" stackId="a" fill="#3F8CFF"/>
-        <Bar dataKey="low" stackId="a" fill="#22C55E" radius={[4, 4, 0, 0]}/>
+        <Bar dataKey="high" stackId="a" fill="#FF754C" />
+        <Bar dataKey="medium" stackId="a" fill="#3F8CFF" />
+        <Bar dataKey="low" stackId="a" fill="#22C55E" radius={[4, 4, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   )

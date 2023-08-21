@@ -1,9 +1,12 @@
 "use client"
 
+import Link from "next/link"
 import { DotsHorizontalIcon } from "@radix-ui/react-icons"
 import { Row } from "@tanstack/react-table"
-import Link from "next/link"
+import { labels } from "@/app/dashboard/applications/data/data"
+import { taskSchema } from "@/app/dashboard/applications/data/schema"
 import { Button } from "../ui/button"
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,9 +20,6 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu"
-
-import { labels } from "@/app/dashboard/applications/data/data"
-import { taskSchema } from "@/app/dashboard/applications/data/schema"
 
 interface DataTableRowActionsProps<TData> {
   row: Row<TData>
@@ -43,9 +43,7 @@ export function DataTableRowActions<TData>({
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[160px]">
         <DropdownMenuItem>
-          <Link href="/dashboard/applications/details">
-            Details
-          </Link>
+          <Link href="/dashboard/applications/details">Details</Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuSub>
@@ -61,9 +59,7 @@ export function DataTableRowActions<TData>({
           </DropdownMenuSubContent>
         </DropdownMenuSub>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          Delete
-        </DropdownMenuItem>
+        <DropdownMenuItem>Delete</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )

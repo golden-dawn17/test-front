@@ -1,6 +1,9 @@
 "use client"
 
 import * as React from "react"
+import { DataTablePagination } from "./data-table-pagination"
+import { DataTableToolbar } from "./data-table-toolbar"
+
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -24,9 +27,6 @@ import {
   TableHeader,
   TableRow,
 } from "../ui/table"
-
-import { DataTablePagination } from "./data-table-pagination"
-import { DataTableToolbar } from "./data-table-toolbar"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -70,7 +70,12 @@ export function DataTable<TData, TValue>({
   return (
     <div className="space-y-4">
       <DataTableToolbar table={table} />
-      <div className="rounded-md border" style={{boxShadow:"0px 1px 5px 0px #E5E4E2, 0px 1px 5px 0px #E5E4E2"}}>
+      <div
+        className="rounded-md border"
+        style={{
+          boxShadow: "0px 1px 5px 0px #E5E4E2, 0px 1px 5px 0px #E5E4E2",
+        }}
+      >
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (

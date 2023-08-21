@@ -3,15 +3,9 @@ import {
   ArrowDownIcon,
   ArrowRightIcon,
   ArrowUpIcon,
-  CheckCircledIcon,
-  CircleIcon,
-  CrossCircledIcon,
-  QuestionMarkCircledIcon,
   StopwatchIcon,
 } from "@radix-ui/react-icons"
 
-import { LucideCloud } from "lucide-react"
-import { ScreenShareIcon } from "lucide-react"
 import { Airplay } from "lucide-react"
 import { Cloud } from "lucide-react"
 

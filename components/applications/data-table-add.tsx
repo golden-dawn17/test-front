@@ -2,10 +2,10 @@
 
 import { DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu"
 import { MixerHorizontalIcon } from "@radix-ui/react-icons"
-import { PlusIcon } from "lucide-react"
 import { Table } from "@tanstack/react-table"
-
+import { PlusIcon } from "lucide-react"
 import { Button } from "../ui/button"
+
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -18,9 +18,7 @@ interface DataTableAddProps<TData> {
   table: Table<TData>
 }
 
-export function DataTableAdd<TData>({
-  table,
-}: DataTableAddProps<TData>) {
+export function DataTableAdd<TData>({ table }: DataTableAddProps<TData>) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -28,10 +26,10 @@ export function DataTableAdd<TData>({
           variant="outline"
           size="sm"
           className="ml-auto hidden h-8 lg:flex"
-          style={{background:"black",color:"white"}}
+          style={{ background: "black", color: "white" }}
         >
-          <PlusIcon className="mr-1 h-4 w-4"/>
-          <p style={{fontSize:"12px"}}>Add</p>
+          <PlusIcon className="mr-1 h-4 w-4" />
+          <p style={{ fontSize: "12px" }}>Add</p>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[150px]">

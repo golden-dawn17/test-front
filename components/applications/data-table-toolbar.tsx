@@ -3,12 +3,12 @@
 import { Cross2Icon } from "@radix-ui/react-icons"
 import { Table } from "@tanstack/react-table"
 
+import { risks, types } from "@/app/dashboard/applications/data/data"
+
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
-
-import { risks, types } from "@/app/dashboard/applications/data/data"
-import { DataTableFacetedFilter } from "./data-table-faceted-filter"
 import { DataTableAdd } from "./data-table-add"
+import { DataTableFacetedFilter } from "./data-table-faceted-filter"
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>
@@ -29,14 +29,18 @@ export function DataTableToolbar<TData>({
             table.getColumn("name")?.setFilterValue(event.target.value)
           }
           className="h-8 w-[150px] lg:w-[250px]"
-          style={{boxShadow:"0px 1px 4px 0px #E5E4E2, 0px 1px 4px 0px #E5E4E2"}}
+          style={{
+            boxShadow: "0px 1px 4px 0px #E5E4E2, 0px 1px 4px 0px #E5E4E2",
+          }}
         />
         {isFiltered && (
           <Button
             variant="ghost"
             onClick={() => table.resetColumnFilters()}
             className="h-8 px-2 lg:px-3"
-            style={{boxShadow:"0px 1px 4px 0px #E5E4E2, 0px 1px 4px 0px #E5E4E2"}}
+            style={{
+              boxShadow: "0px 1px 4px 0px #E5E4E2, 0px 1px 4px 0px #E5E4E2",
+            }}
           >
             Reset filter
             <Cross2Icon className="ml-2 h-4 w-4" />

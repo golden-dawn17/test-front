@@ -1,11 +1,8 @@
 import Link from "next/link"
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "../ui/avatar"
-import { Button } from "../ui/button"
 import { BellIcon } from "lucide-react"
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
+import { Button } from "../ui/button"
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,12 +18,12 @@ export function Notifications() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-      <Button
+        <Button
           size="sm"
           className="m h-8 lg:flex mt-1"
-          style={{background:"white",color:"black"}}
+          style={{ background: "white", color: "black" }}
         >
-          <BellIcon className="h-4 w-4"/>
+          <BellIcon className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56" align="end" forceMount>
@@ -51,11 +48,7 @@ export function Notifications() {
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <Link
-                href="/login"
-              >
-                Logout
-          </Link>{" "}
+          <Link href="/login">Logout</Link>{" "}
           <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
         </DropdownMenuItem>
       </DropdownMenuContent>

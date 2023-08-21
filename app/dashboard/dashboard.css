@@ -1,6 +1,6 @@
 .dashboardLayout {  display: grid;
-    grid-template-columns: 265px 265px 265px 220px 220px;
-    grid-template-rows: 135px 500px;
+    grid-template-columns: 265fr 265fr 265fr 220fr 220fr;
+    grid-template-rows: 135fr 500fr;
     gap: 18px;
     grid-auto-flow: row;
     grid-template-areas:

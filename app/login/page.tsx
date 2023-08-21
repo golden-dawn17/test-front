@@ -1,17 +1,5 @@
 "use client"
 
-import { Icons } from "@/components/icons"
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { UserAuthFormLogin } from "@/components/login/login-page"
 
 export default function LoginAccount() {
@@ -30,7 +18,7 @@ export default function LoginAccount() {
               strokeLinecap="round"
               strokeLinejoin="round"
               className="mr-2 h-6 w-6"
-            >
+              >
               <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
             </svg>
             Palo Alto Networks
@@ -44,20 +32,20 @@ export default function LoginAccount() {
             </blockquote>
           </div>
         </div>
-          <div className="lg:p-8">
+        <div className="lg:p-8">
           <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
             <div className="flex flex-col space-y-2 text-center mb-5">
               <h1 className="text-2xl font-semibold tracking-tight">
-              Welcome back!
+                Welcome back!
               </h1>
               <p className="text-sm text-muted-foreground">
-              Enter your credentials below to login
+                Enter your credentials below to login
               </p>
             </div>
             <UserAuthFormLogin />
           </div>
         </div>
-        </div>
+      </div>
     </section>
   )
 }
